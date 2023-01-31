@@ -1,1 +1,17 @@
-2022-11-02 11:49:58 - root - INFO - SUCCESS: loading file with path: ./data/bank_data.csv successfully
+2023-01-31 15:38:09,775 - root - INFO - SUCCESS: loading file with path: ./data/bank_data.csv successfully
+2023-01-31 15:38:09,776 - root - INFO - Success: Testing import_data
+2023-01-31 15:38:09,785 - root - INFO - SUCCESS: loading file with path: ./data/bank_data.csv successfully
+2023-01-31 15:38:09,786 - root - INFO - SUCCESS: processed the file
+2023-01-31 15:38:09,786 - root - INFO - Success: Testing preprocess_data
+2023-01-31 15:38:09,795 - root - INFO - SUCCESS: loading file with path: ./data/bank_data.csv successfully
+2023-01-31 15:38:09,796 - root - INFO - SUCCESS: processed the file
+2023-01-31 15:38:10,337 - root - INFO - Success: perform_eda
+2023-01-31 15:38:10,348 - root - INFO - SUCCESS: loading file with path: ./data/bank_data.csv successfully
+2023-01-31 15:38:10,350 - root - INFO - SUCCESS: processed the file
+2023-01-31 15:38:10,531 - root - INFO - Success encoder_helper
+2023-01-31 15:38:10,542 - root - INFO - SUCCESS: loading file with path: ./data/bank_data.csv successfully
+2023-01-31 15:38:10,543 - root - INFO - SUCCESS: processed the file
+2023-01-31 15:38:10,922 - root - INFO - Success perform_feature_engineering
+2023-01-31 15:38:10,933 - root - INFO - SUCCESS: loading file with path: ./data/bank_data.csv successfully
+2023-01-31 15:38:10,935 - root - INFO - SUCCESS: processed the file
+2023-01-31 15:40:23,032 - root - INFO - Success test_train_models

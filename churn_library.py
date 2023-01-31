@@ -4,7 +4,7 @@ This Module contains function for preprocessing, feature engineering, training, 
 
 Author: Zyad
 
-6/23/2022
+1/30/2023
 '''
 
 # import libraries
@@ -48,6 +48,26 @@ def import_data(pth):
         raise err
 
 
+def preprocess_data(df_data):
+    '''
+    returns a processed dataframe from the passed dataframe
+
+    input:
+            df_data: pandas dataframe
+    output:
+            df_data: processed pandas dataframe
+    '''
+    try:
+        assert isinstance(df_data, pd.DataFrame)
+        df_data['Churn'] = df_data['Attrition_Flag'].apply(
+            lambda val: 0 if val == "Existing Customer" else 1)
+        logging.info('SUCCESS: processed the file')
+        return df_data
+    except (Exception, AssertionError) as err:
+        logging.error('ERROR: processing the file failed')
+        raise err
+
+
 def perform_eda(df_data):
     '''
     perform eda on df_data and save figures to images folder
@@ -57,15 +77,12 @@ def perform_eda(df_data):
     output:
             None
     '''
-
     try:
         assert isinstance(df_data, pd.DataFrame)
     except (AssertionError) as err:
         logging.error(
             'ERROR: argument is worng type %s', err)
         raise err
-    df_data['Churn'] = df_data['Attrition_Flag'].apply(
-        lambda val: 0 if val == "Existing Customer" else 1)
 
     # churning distribution
     plt.figure(figsize=(20, 10))
@@ -124,6 +141,7 @@ def encoder_helper(df_data, category_lst, response):
 
 def perform_feature_engineering(df_data, response):
     '''
+    The aim of this function is to perform feature engineering on the data
     input:
               df_data: pandas dataframe
               response: string of response name [optional argument that could be
