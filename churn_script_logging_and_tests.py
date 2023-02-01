@@ -1,4 +1,10 @@
+'''
+This Module contains the test function for preprocessing, feature engineering, training, and more.
 
+Author: Zyad
+
+2/1/2023
+'''
 import logging
 import churn_library as cls
 
